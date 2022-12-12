@@ -1,4 +1,4 @@
-package com.application.bookorder;
+package com.application.bookorder.mapper;
 
 import com.application.bookorder.dto.UserDTO;
 import com.application.bookorder.entity.User;

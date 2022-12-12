@@ -2,8 +2,6 @@ package com.application.bookorder.entity;
 
 import lombok.Data;
 
-import java.util.Objects;
-
 @Data
 public class User extends BaseEntity{
 
@@ -25,15 +23,16 @@ public class User extends BaseEntity{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        User user = (User) o;
+        User other = (User) o;
 
-        if (!Objects.equals(name, user.name)) return false;
-        return Objects.equals(email, user.email);
+       return id.equals(other.id) &&
+               name.equals(other.name) &&
+               email.equals(other.email);
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
+        int result = (id != null ? id.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
