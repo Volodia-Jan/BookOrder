@@ -11,7 +11,6 @@ public interface HotelService {
 
     HotelDTO addNewHotel(HotelDTO hotelDTO);
 
-
     HotelDTO updateHotelInfo(HotelDTO hotelDTO);
 
     void deleteHotelById(Long hotelId);
